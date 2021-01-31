@@ -33,6 +33,11 @@ namespace Shortcut_Launcher
         public Form1()
         {
             InitializeComponent();
+            InitializeSettings();
+        }
+
+        public void InitializeSettings()
+        {
             var key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\e-ShopShortcuts");
             if (key != null)
             {
@@ -65,10 +70,7 @@ namespace Shortcut_Launcher
 
                 key.Close();
             }
-
-            this.ChangeHeight(this.Height);
         }
-
         public void ChangeHeight(decimal value)
         {
             
