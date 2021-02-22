@@ -88,7 +88,9 @@ namespace Shortcut_Launcher
             key.SetValue("height", numericUpDown1.Value);
             key.Close();
             this.Hide();
+            Properties.Settings.Default.Height = numericUpDown1.Value;
             form1.InitializeSettings();
+            Properties.Settings.Default.Save();
         }
         private void button1_Click(object sender, EventArgs e)
         {

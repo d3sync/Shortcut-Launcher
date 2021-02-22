@@ -175,7 +175,7 @@ namespace Shortcut_Launcher
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.ChangeHeight(this.Height);
+            ChangeHeight(Properties.Settings.Default.Height);
         }
 
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
